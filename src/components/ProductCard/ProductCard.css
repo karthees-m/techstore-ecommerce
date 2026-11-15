@@ -1,7 +1,3 @@
-/* ==========================================
-   ULTRA-CLEAN MODERN PRODUCT CARD (MOBILE OPTIMIZED)
-   ========================================== */
-
 .product-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -22,7 +18,6 @@
     border-color: #cbd5e1;
 }
 
-/* Reduced Image Height for Mobile to save space */
 .product-image {
     height: 160px;
     padding: 16px;
@@ -45,7 +40,6 @@
     transform: scale(1.05);
 }
 
-/* Glassy Wishlist Button */
 .wishlist-button {
     position: absolute;
     top: 10px;
@@ -72,7 +66,6 @@
     border-color: #fca5a5;
 }
 
-/* Content Area - Optimized Padding */
 .product-info {
     padding: 12px;
     flex: 1;
@@ -90,7 +83,6 @@
     margin-bottom: 4px;
 }
 
-/* Fixed height for titles so cards don't misalign */
 .product-info h3 {
     font-size: 13px;
     font-weight: 700;
@@ -108,7 +100,6 @@
     color: #0f172a;
 }
 
-/* Fixed height for description */
 .product-desc-snippet {
     font-size: 11px;
     color: #64748b;
@@ -121,7 +112,6 @@
     height: 31px;
 }
 
-/* Price Section aligned to bottom securely */
 .product-price {
     margin-top: auto;
     font-size: 15px;
@@ -150,7 +140,6 @@
     border-radius: 4px;
 }
 
-/* Clean Action Buttons */
 .product-actions {
     display: flex;
     gap: 8px;
@@ -194,7 +183,6 @@
     background: #1d4ed8;
 }
 
-/* Out of Stock */
 .out-of-stock-card {
     opacity: 0.9;
     border-color: #cbd5e1;
@@ -220,9 +208,6 @@
     pointer-events: none;
 }
 
-/* ==========================================
-   DESKTOP / LARGER SCREENS OVERRIDE
-   ========================================== */
 @media (min-width: 768px) {
     .product-image {
         height: 200px;
