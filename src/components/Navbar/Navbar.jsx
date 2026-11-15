@@ -62,7 +62,6 @@ const Navbar = ({ currentUser, isAdmin }) => {
     return "U";
   };
 
-  // 🔥 CUSTOM SCROLL FUNCTION (URL-la # varathu, clean-a scroll aagum)
   const scrollToSection = (sectionId) => {
     setIsMobileMenuOpen(false);
     if (window.location.pathname !== "/") {
@@ -122,7 +121,6 @@ const Navbar = ({ currentUser, isAdmin }) => {
             <Link to="/" className="nav-link">
               Home
             </Link>
-            {/* 🔥 REPLACED LINKS WITH CLEAN SCROLL TRIGGERS */}
             <a
               onClick={() => scrollToSection("products")}
               className="nav-link"
@@ -331,7 +329,6 @@ const Navbar = ({ currentUser, isAdmin }) => {
         </div>
       </header>
 
-      {/* MOBILE MENU */}
       <div
         className={`mobile-menu-overlay ${isMobileMenuOpen ? "active" : ""}`}
         onClick={() => setIsMobileMenuOpen(false)}
@@ -372,7 +369,6 @@ const Navbar = ({ currentUser, isAdmin }) => {
           <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
             Home
           </Link>
-          {/* 🔥 MOBILE MENU SCROLL LINKS */}
           <a
             onClick={() => scrollToSection("products")}
             className="mobile-nav-link"
