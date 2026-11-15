@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="100" height="100" rx="22" fill="#0f172a" />
+  <!-- 'T' Letter Logo -->
+  <path d="M25 30 h50 v14 h-18 v36 h-14 v-36 h-18 z" fill="url(#techGradient)" filter="url(#glow)" />
+  <!-- Tech Accent Dot -->
+  <circle cx="75" cy="70" r="4" fill="#f59e0b" />
+</svg>

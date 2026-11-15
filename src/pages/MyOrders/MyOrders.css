@@ -1,0 +1,380 @@
+.my-orders-page {
+    padding: 40px 20px;
+    min-height: 60vh;
+}
+
+.my-orders-page h2 {
+    margin-bottom: 24px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.no-orders-msg {
+    padding: 40px;
+    background: white;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-history-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+/* Header */
+.order-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.order-id {
+    font-size: 13px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.order-date {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.order-total {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+/* Item Preview */
+.order-items-preview {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.preview-item-row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.preview-img-box {
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    flex-shrink: 0;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.preview-img-box:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.1);
+}
+
+.preview-img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.preview-item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+    display: inline-block;
+}
+
+.product-link h4 {
+    margin: 0 0 6px 0;
+    font-size: 15px;
+    color: #0f172a;
+    font-weight: 700;
+    line-height: 1.4;
+    transition: 0.2s;
+}
+
+.product-link:hover h4 {
+    color: #2563eb;
+}
+
+.preview-item-details p {
+    margin: 0 0 12px 0;
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.preview-item-details p span {
+    color: #0f172a;
+    margin-left: 6px;
+}
+
+.rate-item-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #2563eb;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #bfdbfe;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: #eff6ff;
+    transition: 0.2s;
+}
+
+.rate-item-btn:hover {
+    background: #dbeafe;
+}
+
+/* Footer */
+.order-history-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-top: 1px solid #f1f5f9;
+    background: white;
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.status-badge.processing {
+    background: #fef08a;
+    color: #854d0e;
+}
+
+.status-badge.shipped {
+    background: #bfdbfe;
+    color: #1e3a8a;
+}
+
+.status-badge.delivered {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.cancelled {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* 🔥 CANCELLED BADGE */
+
+.track-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+    cursor: pointer;
+}
+
+.track-toggle-btn:hover {
+    color: #2563eb;
+}
+
+/* Tracking Details */
+.order-tracking-details {
+    padding: 24px;
+    border-top: 1px dashed #e2e8f0;
+    background: #fafaf9;
+}
+
+.download-invoice-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #0f172a;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.download-invoice-btn:hover {
+    background: #1e293b;
+}
+
+/* 🔥 CANCEL BUTTON */
+.cancel-order-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: white;
+    color: #dc2626;
+    border: 1px solid #ef4444;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cancel-order-btn:hover {
+    background: #fef2f2;
+}
+
+/* 🔥 CANCELLED ALERT MESSAGE */
+.cancelled-alert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px dashed #ef4444;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.tracking-timeline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 0 40px;
+}
+
+.track-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.4;
+    transition: 0.3s;
+}
+
+.track-step.active {
+    opacity: 1;
+}
+
+.track-icon {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border: 2px solid #cbd5e1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    z-index: 2;
+}
+
+.track-step.active .track-icon {
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.track-step p {
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+    margin: 0;
+}
+
+.track-line {
+    flex: 1;
+    height: 4px;
+    background: #e2e8f0;
+    margin: 0 10px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.track-line.active {
+    background: #2563eb;
+}
+
+.delivery-address-box {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #475569;
+}
+
+.delivery-address-box h4 {
+    font-size: 13px;
+    color: #0f172a;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.delivery-address-box p {
+    margin: 4px 0;
+}
+
+@media (max-width: 600px) {
+    .order-history-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .tracking-timeline {
+        padding: 0;
+    }
+
+    .track-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .track-step p {
+        font-size: 11px;
+    }
+}
