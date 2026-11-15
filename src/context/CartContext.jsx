@@ -5,7 +5,6 @@ const CartContext = createContext();
 export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
-  // 🔥 INITIALIZE STATE FROM LOCAL STORAGE
   const [cartItems, setCartItems] = useState(() => {
     const savedCart = localStorage.getItem("techstore_cart");
     return savedCart ? JSON.parse(savedCart) : [];
@@ -16,17 +15,14 @@ export const CartProvider = ({ children }) => {
     return savedWishlist ? JSON.parse(savedWishlist) : [];
   });
 
-  // 🔥 SAVE TO LOCAL STORAGE WHENEVER CART CHANGES
   useEffect(() => {
     localStorage.setItem("techstore_cart", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // 🔥 SAVE TO LOCAL STORAGE WHENEVER WISHLIST CHANGES
   useEffect(() => {
     localStorage.setItem("techstore_wishlist", JSON.stringify(wishlistItems));
   }, [wishlistItems]);
 
-  // --- CART FUNCTIONS ---
   const addToCart = (product) => {
     setCartItems((prev) => {
       const existingItem = prev.find((item) => item.id === product.id);
@@ -58,14 +54,13 @@ export const CartProvider = ({ children }) => {
     setCartItems([]);
   };
 
-  // --- WISHLIST FUNCTIONS ---
   const toggleWishlist = (product) => {
     setWishlistItems((prev) => {
       const exists = prev.find((item) => item.id === product.id);
       if (exists) {
-        return prev.filter((item) => item.id !== product.id); // Remove if exists
+        return prev.filter((item) => item.id !== product.id);
       }
-      return [...prev, product]; // Add if doesn't exist
+      return [...prev, product]; 
     });
   };
 
