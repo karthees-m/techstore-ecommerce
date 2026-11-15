@@ -10,7 +10,6 @@ const ProductCard = ({ product }) => {
   );
   const isWishlisted = wishlistItems?.some((item) => item.id === product.id);
 
-  // Check if Out of Stock
   const isOutOfStock = product.stockQuantity <= 0;
 
   return (
@@ -37,7 +36,6 @@ const ProductCard = ({ product }) => {
           {isOutOfStock && <div className="oos-overlay">OUT OF STOCK</div>}
         </Link>
 
-        {/* 🔥 EMOJIS REMOVED: PREMIUM SVG HEART ICON FOR WISHLIST */}
         <button
           className={`wishlist-button ${isWishlisted ? "active" : ""}`}
           title="Add to Wishlist"
@@ -78,7 +76,6 @@ const ProductCard = ({ product }) => {
           <Link to={`/product/${product.id}`}>{product.name}</Link>
         </h3>
 
-        {/* 🔥 NEW: DESCRIPTION SNIPPET (Will be clamped to 2 lines via CSS) */}
         <p className="product-desc-snippet">{product.description}</p>
 
         <div className="product-price">
