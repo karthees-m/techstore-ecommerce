@@ -32,7 +32,6 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
 }
 
-/* Header */
 .order-history-header {
     display: flex;
     justify-content: space-between;
@@ -60,7 +59,6 @@
     color: #2563eb;
 }
 
-/* Item Preview */
 .order-items-preview {
     padding: 20px;
     display: flex;
@@ -158,7 +156,6 @@
     background: #dbeafe;
 }
 
-/* Footer */
 .order-history-footer {
     display: flex;
     justify-content: space-between;
@@ -196,8 +193,6 @@
     color: #dc2626;
 }
 
-/* 🔥 CANCELLED BADGE */
-
 .track-toggle-btn {
     display: flex;
     align-items: center;
@@ -214,7 +209,6 @@
     color: #2563eb;
 }
 
-/* Tracking Details */
 .order-tracking-details {
     padding: 24px;
     border-top: 1px dashed #e2e8f0;
@@ -240,7 +234,6 @@
     background: #1e293b;
 }
 
-/* 🔥 CANCEL BUTTON */
 .cancel-order-btn {
     display: flex;
     align-items: center;
@@ -260,7 +253,6 @@
     background: #fef2f2;
 }
 
-/* 🔥 CANCELLED ALERT MESSAGE */
 .cancelled-alert {
     display: flex;
     align-items: center;
