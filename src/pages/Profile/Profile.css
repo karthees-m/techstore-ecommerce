@@ -78,7 +78,6 @@
     font-size: 13px;
 }
 
-/* Address Cards */
 .address-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -149,7 +148,6 @@
     background: #fecaca;
 }
 
-/* Form Styles */
 .address-form-card {
     background: #f8fafc;
     padding: 24px;
