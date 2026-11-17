@@ -186,7 +186,6 @@ const ProductDetail = ({ currentUser }) => {
     ? reviews.find((r) => r.userId === currentUser.uid)
     : null;
 
-  // SVG Helper
   const StarIcon = ({ filled }) => (
     <svg
       width="14"
