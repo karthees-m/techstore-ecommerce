@@ -17,7 +17,6 @@ const MyOrders = ({ currentUser }) => {
   const [loading, setLoading] = useState(true);
   const [expandedOrder, setExpandedOrder] = useState(null);
 
-  // 🔥 FETCH DYNAMIC STORE INFO FOR INVOICE
   const [storeInfo, setStoreInfo] = useState({
     address: "Annai Complex, Kuthukalvalasai, TN 627803",
     phone: "091503 03600",
@@ -27,7 +26,6 @@ const MyOrders = ({ currentUser }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch User Orders
         const q = query(
           collection(db, "orders"),
           where("customerEmail", "==", currentUser.email),
@@ -40,7 +38,6 @@ const MyOrders = ({ currentUser }) => {
         myOrders.sort((a, b) => new Date(b.date) - new Date(a.date));
         setOrders(myOrders);
 
-        // Fetch Admin Configured Store Info
         const metaSnap = await getDoc(doc(db, "store_metadata", "config"));
         if (metaSnap.exists() && metaSnap.data().storeInfo) {
           setStoreInfo(metaSnap.data().storeInfo);
@@ -71,7 +68,6 @@ const MyOrders = ({ currentUser }) => {
     }
   };
 
-  // 🔥 DYNAMICALLY GENERATE INVOICE WITH ADMIN STORE INFO
   const handleDownloadInvoice = (order) => {
     const invoiceHTML = `
       <!DOCTYPE html>
