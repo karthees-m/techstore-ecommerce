@@ -9,12 +9,10 @@ const Wishlist = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate minor load for smooth skeleton appearance
     const timer = setTimeout(() => setLoading(false), 300);
     return () => clearTimeout(timer);
   }, []);
 
-  // 🔥 1. SKELETON LOADER WHILE FETCHING
   if (loading) {
     return (
       <div className="wishlist-page container page-view active">
@@ -39,7 +37,6 @@ const Wishlist = () => {
     );
   }
 
-  // 🔥 2. ORIGINAL EMPTY WISHLIST DESIGN (When 0 items)
   if (wishlistItems.length === 0) {
     return (
       <div className="empty-wishlist container page-view active">
@@ -56,7 +53,6 @@ const Wishlist = () => {
     );
   }
 
-  // 🔥 3. POPULATED WISHLIST GRID
   return (
     <div className="wishlist-page container page-view active">
       <div className="wishlist-header">
