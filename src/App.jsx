@@ -12,7 +12,7 @@ import Wishlist from "./pages/Wishlist/Wishlist";
 import Checkout from "./pages/Checkout/Checkout";
 import MyOrders from "./pages/MyOrders/MyOrders";
 import Profile from "./pages/Profile/Profile";
-import ProductDetail from "./pages/ProductDetail/ProductDetail"; // 🔥 NEW: Dedicated Product Page
+import ProductDetail from "./pages/ProductDetail/ProductDetail"; 
 import { CartProvider } from "./context/CartContext";
 
 const ADMIN_EMAIL = "mkarthees7@gmail.com";
@@ -82,7 +82,6 @@ function App() {
               path="/product/:id"
               element={<ProductDetail currentUser={currentUser} />}
             />{" "}
-            {/* 🔥 REAL PRODUCT ROUTE */}
             <Route
               path="/admin"
               element={isAdmin ? <AdminDashboard /> : <Navigate to="/" />}
