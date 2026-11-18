@@ -21,7 +21,7 @@ const Checkout = ({ currentUser }) => {
         if (docSnap.exists() && docSnap.data().addresses) {
           const addrs = docSnap.data().addresses;
           setSavedAddresses(addrs);
-          if (addrs.length > 0) setSelectedAddress(addrs[0]); // Select first by default
+          if (addrs.length > 0) setSelectedAddress(addrs[0]);
         }
       } catch (error) {
         console.error("Error fetching addresses", error);
