@@ -34,7 +34,6 @@
     margin-bottom: 10px;
 }
 
-/* Selectable Addresses */
 .address-selector-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
